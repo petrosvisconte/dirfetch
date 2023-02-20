@@ -64,7 +64,7 @@ function main {
     # Values: Any of the predefined colors above
     BOX_COLOR="${l_gray}"
     TEXT_COLOR="${l_blue}"
-	##################### END OF CUSTOMIZATION VARIABLES #######################
+    ##################### END OF CUSTOMIZATION VARIABLES #######################
     
     Display_Out
 }
@@ -121,7 +121,6 @@ function Get_Size {
         size=$(printf $size)
     fi
     # Converts bytes value to human-readable string [$1: bytes value]
-    # Author: https://unix.stackexchange.com/questions/44040/a-standard-tool-to-convert-a-byte-count-into-human-kib-mib-etc-like-du-ls1
     local i=${size} 
     local d="" 
     local s=0 
