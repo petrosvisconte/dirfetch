@@ -34,7 +34,7 @@ UNITS='1024'
 
 # Style
 # 
-# Default: 'text'
+# Default: 'box'
 # Values: 'box', 'text'
 STYLE='text'
 
