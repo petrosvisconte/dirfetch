@@ -71,7 +71,8 @@ function main {
 
 function Dir {
     if [ "${dir:-}" ]; then
-        printf "${dir}"
+        [ -z "${dir}" ] && { pwd; return; }
+        (cd -P -- "${dir}" && pwd)
     else
         printf $(pwd)
     fi
