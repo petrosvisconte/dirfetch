@@ -1,4 +1,13 @@
 #!/bin/bash
+#
+# Author: Pierre Visconti
+# Dirfetch: A lightweight directory information fetcher for *nix 
+#
+# 
+# Usage: 
+# 
+# dirfetch
+# dirfetch /path/to/dir
 
 set -euo pipefail
 
@@ -54,16 +63,15 @@ function main {
 
     # Style
     # 
-    # Default:
-    # Values:
-    # Note:
-    STYLE='text'
+    # Default: 'box'
+    # Values: 'box', 'text'
+    STYLE='box'
 
     # Colors
     # 
     # Values: Any of the predefined colors above
-    BOX_COLOR="${l_gray}"
-    TEXT_COLOR="${l_blue}"
+    BOX_COLOR="${l_blue}"
+    TEXT_COLOR="${l_gray}"
     ##################### END OF CUSTOMIZATION VARIABLES #######################
     
     Display_Out
