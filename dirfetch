@@ -18,7 +18,7 @@ function main {
     # l: light variant
     # d: dark variant
     # b: bolded
-    local default="\e[0;39m"
+    default="\e[0;39m"
     local black="\e[0;30m"
     local red="\e[0;31m"
     local green="\e[0;32m"
@@ -162,7 +162,7 @@ function Box_Out {
     for l in "${s[@]}"; do
         printf "   ${BOX_COLOR}|  ${TEXT_COLOR}%s%*s%s ${BOX_COLOR} |\n" "" "-${w}" "${l}"
     done
-    printf "${BOX_COLOR}   | ${b//?/ }   |\n    --${b//?/-}--\n\n"
+    printf "${BOX_COLOR}   | ${b//?/ }   |\n    --${b//?/-}--\n\n ${default}"
 }
 
 function Text_Out {
@@ -176,7 +176,7 @@ function Text_Out {
     for l in "${s[@]}"; do
         printf "     ${TEXT_COLOR}%s%*s%s \n" "" "-${w}" "${l}"
     done
-    echo ""
+    echo -e "${default}"
 }
 
 function Display_Out {
