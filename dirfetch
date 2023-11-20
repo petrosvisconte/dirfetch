@@ -109,13 +109,15 @@ function Get_Dir {
     local total=
     if [ "${dir:-}" ]; then
         curr=$(find "${dir}" -maxdepth 1 -type d | wc -l)
+	curr="$((curr-1))"
         sub=$(find "${dir}" -mindepth 2 -type d | wc -l)
-        total=$(find "${dir}" -type d | wc -l)
+        total="$((curr+sub))"
         printf "${curr} curr - ${sub} sub - ${total} total"
     else 
-        curr=$(find -maxdepth 1 -type d | wc -l)                
+        curr=$(find -maxdepth 1 -type d | wc -l)
+	curr="$((curr-1))"
         sub=$(find -mindepth 2 -type d | wc -l)
-        total=$(find -type d | wc -l)
+        total="$((curr+sub))"
         printf "${curr} curr - ${sub} sub - ${total} total"
     fi
 }
