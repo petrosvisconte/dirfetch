@@ -63,7 +63,7 @@ function main {
 
     # Style
     # 
-    # Default: 'box'
+    # Default: 'text'
     # Values: 'box', 'text'
     STYLE='box'
 
