@@ -65,7 +65,7 @@ function main {
     # 
     # Default: 'text'
     # Values: 'box', 'text'
-    STYLE='box'
+    STYLE='text'
 
     # Colors
     # 
